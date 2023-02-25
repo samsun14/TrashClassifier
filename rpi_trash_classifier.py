@@ -1,31 +1,4 @@
-# ------------------------------------------------------------------------
-# Trash Classifier ML Project
-# Please review ReadMe for instructions on how to build and run the program
-# 
-# (c) 2020 by Jen Fox, Microsoft
-# MIT License
-# --------------------------------------------------------------------------
-
-
-#import Pi GPIO library button class
-from gpiozero import Button, LED, PWMLED
-from picamera import PiCamera
-from time import sleep
-
-from lobe import ImageModel
-
-#Create input, output, and camera objects
-button = Button(2)
-
-yellow_led = LED(17) #garbage
-blue_led = LED(27) #recycle
-green_led = LED(22) #compost
-red_led = LED(23) #hazardous waste facility
-white_led = PWMLED(24) #Status light and retake photo
-
-camera = PiCamera()
-
-# Load Lobe TF model
+be TF model
 # --> Change model file path as needed
 model = ImageModel.load('/home/pi/Lobe/model')
 
